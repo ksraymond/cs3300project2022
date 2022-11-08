@@ -7,10 +7,28 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
+  <style>
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+
 </head>
 <body>
-<p> Put your HTML using Bootstrap CSS
-</p>
+<h1>My Portfolio</h1>
+
+<button class="button"> What is Rails</button>
+
+<button class="button">New Project<%= link_to "New Project", new_project_path %> </button>
 
 </body>
 </html>
