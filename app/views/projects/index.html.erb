@@ -9,10 +9,10 @@
 
   <style>
     .button {
-      background-color: #4CAF50;
+      background-color: #316CF4;
       border: none;
       color: white;
-      padding: 15px 32px;
+      padding: 10px 15px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
@@ -41,27 +41,40 @@
         </ul>
       </div>
   </nav>
-  <h1 class="display-4">My Portfolio</h1>
 
-  <p>
-    My name is Keaton Raymond and I am getting a 
-    <a href="https://eas.uccs.edu/cs/academics/undergraduate-programs/bachelor-of-science-in-computer-science">BS in Computer Science at UCCS</a>.
-  </p>
+    <h1 class="display-4">My Portfolio</h1>
 
-  <div class="container border">
+    <p>
+      My name is Keaton Raymond and I am getting a 
+      <a href="https://eas.uccs.edu/cs/academics/undergraduate-programs/bachelor-of-science-in-computer-science">BS in Computer Science at UCCS</a>.
+    </p>
+
+  <%= link_to "New Project", new_project_path, :class => "button" %>
+
+  <div class="border w-75 mx-auto">
     <p>Programming Languages</p>
     <li>Java</li>
     <li>Python</li>
     <li>C#</li>
   </div>
 
-  <div class="container border">
+  <div class="border w-75 mx-auto">
     <p>Technical Skills</p>
     <li>Algorithm Optimization</li>
     <li>Shell Scripting</li>
-    <li></li>
+    <li>MS Office Suite</li>
   </div>
-
-  <%= link_to "New Project", new_project_path, :class => "button" %>
+  
+    <div id="projects">
+      <% @projects.each do |project| %>
+        <div class="border border-primary w-75 mx-auto mt-2">
+        <%= render project %>
+        <p>
+          <%= link_to "Show this project", project, :class => "button" %>
+        </p>
+        </div>
+      <% end %>
+    </div>
+  
 </body>
 </html>
