@@ -253,7 +253,6 @@ GEM
 
 PLATFORMS
   aarch64-linux
-  ruby
 
 DEPENDENCIES
   bootsnap
@@ -262,6 +261,7 @@ DEPENDENCIES
   devise
   importmap-rails
   jbuilder
+  libv8-node
   mini_racer
   pg (~> 0.21)
   puma (~> 5.0)
